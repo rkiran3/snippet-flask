@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Snippets </title>
+      {% else %}
+      <title> Snippets Center </title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Snippets: 
+            <a href="/index">Home</a>
+            <a href="/login">Login</a>
+        </div>
+        
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,11 +1,8 @@
-<!doctype html>
-<html>
+{% extends "base.html" %}
 
-	<head>
-		{{ title }} - Snippets
-	</head>
-	<body>
-		<h1>Hello, {{ user.username }}! </h1>
-	</body>
-</html>
- 
+{% block content %}
+    <h1>Hi, {{ user.username }}!</h1>
+    {% for snippet in snippets %}
+    <div><p>{{ snippet.title }} </p></div>
+    {% endfor %}
+{% endblock %}
